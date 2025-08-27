@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="imgs/logo-claro-png_optimized.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro Challenge </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Desafio Claro</h1>
+            <p>Aplicação abertura de chamados</p>
+        </header>
+        
+        <div class="form-container">
+            <form id="grupoForm">
+                <h2>Informações do chamado</h2>
+                
+                <div class="form-group">
+                    <label for="nome1">Nome</label>
+                    <input type="text" id="nome1" name="nome1" class="nome-input">
+                </div>
+                <div class="form-group">
+                    <label for="cep">Digite seu CEP (apenas números)</label>
+                    <input type="text" id="nome1" name="nome1" class="nome-input">
+                </div>
+
+                <div class="form-group">
+                    <label for="historia">Digite os detalhes dos problemas</label>
+                    <textarea id="historia" name="historia"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn-enviar">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

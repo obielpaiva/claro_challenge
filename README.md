@@ -1,4 +1,4 @@
-[Sistema de Tickets para Problemas de Internet.md](https://github.com/user-attachments/files/22049815/Sistema.de.Tickets.para.Problemas.de.Internet.md)
+
 # Sistema de Tickets para Problemas de Internet - Processo seletivo Claro
 
 ##  🚀 Funcionalidades

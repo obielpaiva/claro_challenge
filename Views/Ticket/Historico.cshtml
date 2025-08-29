@@ -1,0 +1,59 @@
+﻿@model Projeto_Claro.Models.HistoricoViewModel
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="~/css/logo-claro-png_optimized.png" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claro Challenge </title>
+</head>
+<body>
+
+
+    <form asp-action="HistoricoTicket" asp-controller="Ticket" method="post">
+    
+        <div>
+            <label asp-for="MyCPF">CPF do Solicitante:</label>
+            <input asp-for="MyCPF" type="text" />
+            @Html.ValidationMessage("CPF")
+        </div>
+
+        <button type="submit" class="btn-primary">Buscar</button>
+    
+    </form>
+
+
+    
+        @if (Model != null && Model.Tickets.Any())
+        {
+
+            @foreach (var ticket in Model.Tickets)
+        {
+            <div class="cards">
+
+                <p class="item1 " id="ident"> ticket#@ticket.RequestId</p>
+                <div class="item2">
+                    <label  class="text-black">Nome do Solicitante:</label>
+
+                    <input  readonly type="text" value="@ticket.NameUser" />
+                </div>
+                <div class="item3">
+                    <label class="text-black"> IP do Solicitante:</label>
+                    <input readonly type="text" value="@ticket.IPlocal" />
+                </div>
+
+                <div class="item4">
+                    <label class="text-black">Detalhes do problema:</label>
+                    <input  readonly type="text" value="@ticket.Description" />
+                </div>
+
+
+            </div>
+            }
+        }
+
+
+    
+</body>
+</html>
